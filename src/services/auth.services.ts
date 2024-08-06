@@ -35,7 +35,6 @@ export class AuthService implements IAuthService {
     access_token: string;
   }> {
     const { first_name, last_name, email, password } = payload;
-
     try {
       const userExists = await User.findOne({
         where: { email },
